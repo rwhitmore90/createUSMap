@@ -5,9 +5,23 @@
 		<title>Map Color Generator</title>
 		<script type="text/javascript" src="d3.js"></script>
 		<script type="text/javascript" src="createUSMap.js"></script>
+		<script>
+			function loadPage(){
+				colorMap('', '');
+			}
+			function passValues(){
+				var stateString = document.getElementById('states').value.toString();
+				var colorString = document.getElementById('colorCode').value.toString();
+				colorMap(stateString, colorString);
+			}
+		</script>
 	</head>
-	<body>
-		<button type="button" onclick="colorMap('North Carolina, OR', '#ff0000')">Create Map</button><br>
+	<body onload="loadPage()">
+		<form>
+			States: <input type="text" id="states"><br>
+			Color Code: <input type="text" id='colorCode' value='#'><br> 
+		<button type="button" onclick="passValues()">Create Map</button><br>
+		</form>
 		<div id='map'></div>
 	</body>	
 </html>
