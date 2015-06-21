@@ -2,10 +2,8 @@ function colorMap(stateString, stateColor){
 	d3.select('svg').remove();
 	var w = 1500;
 	var h = 600;
-	var projection = d3.geo.albersUsa()
-						   .translate([w/2, h/2]);
-	var path = d3.geo.path()
-					 .projection(projection);
+	var projection = d3.geo.albersUsa().translate([w/2, h/2]);
+	var path = d3.geo.path().projection(projection);
 	var svg = d3.select("#map")
 				.append("svg")
 				.attr("width", w)
