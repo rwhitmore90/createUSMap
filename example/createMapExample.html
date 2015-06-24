@@ -2,26 +2,19 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Map Color Generator</title>
+		<title>US Map Styler</title>
+		<link rel="stylesheet" type="text/css" href="mapApp.css">
 		<script type="text/javascript" src="d3.js"></script>
 		<script type="text/javascript" src="createUSMap.js"></script>
 		<script>
 			function loadPage(){
 				colorMap('', '');
 			}
-			function passValues(){
-				var stateString = document.getElementById('states').value.toString();
-				var colorString = document.getElementById('colorCode').value.toString();
-				colorMap(stateString, colorString);
-			}
 		</script>
 	</head>
 	<body onload="loadPage()">
-		<form>
-			States: <input type="text" id="states"><br>
-			Color Code: <input type="text" id='colorCode' value='#'><br> 
-		<button type="button" onclick="passValues()">Create Map</button><br>
-		</form>
+		<button type="button" onclick="clearList()">Clear List</button><br>
 		<div id='map'></div>
+		<div id='stateList'></div>
 	</body>	
 </html>
