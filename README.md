@@ -12,7 +12,7 @@ The main function is colorMap which takes 2 parameters.
 2. stateColor takes a hex color. Ex. #ff0000
 
 ##Live Demo
-http://whitmoretech.com:5000/createMapExample
+http://whitmoretech.com
 
 ##How to Use
 To create a blank US map, use colorMap('','')
